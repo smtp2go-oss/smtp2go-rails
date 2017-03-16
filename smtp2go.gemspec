@@ -4,19 +4,20 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'smtp2go/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "smtp2go"
+  spec.name          = "smtp2go-rails"
   spec.version       = Smtp2go::VERSION
-  spec.authors       = ["Dave Bush"]
-  spec.email         = ["github@david-bush.co.uk"]
+  spec.authors       = ["smtp2go"]
+  spec.email         = ["devs@smtp2go.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Rails library to interface with smtp2go API.}
+  spec.description   = %q{Adds email sending functionality to your Rails app by leveraging the smtp2go API.}
+  spec.homepage      = "https://github.com/smtp2go-oss/smtp2go-rails"
+  spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata['allowed_push_host'] = 'https://rubygems.org'
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

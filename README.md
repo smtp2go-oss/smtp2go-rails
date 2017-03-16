@@ -1,15 +1,29 @@
-# Smtp2go
+# smtp2go-rails
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/smtp2go`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby on Rails library for interfacing with the (smtp2go)[https://www.smtp2go.com] API.
 
-TODO: Delete this and the text above, and describe your gem
+    You might not need this gem at all! If you want to use smtp2go's SMTP server directly, simply add the following to your config/environment.rb:
+
+
+```ruby
+config.action_mailer.perform_deliveries = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.smtp_settings = {
+  address:  'mail.smtp2go.com',
+  port: 587,  # alternatively: 2525 or 80
+  user_name: '<your smtp2go SMTP username>',
+  password: '<your smtp2go SMTP password>',
+  authentication: :cram_md5,
+  enable_starttls_auto: true
+}
+```
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'smtp2go'
+gem 'smtp2go-rails'
 ```
 
 And then execute:
@@ -18,11 +32,11 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install smtp2go
+    $ gem install smtp2go-rails
 
 ## Usage
 
-TODO: Write usage instructions here
+    This project should be considered in its alpha phase and should not be used.
 
 ## Development
 
@@ -33,4 +47,3 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/smtp2go.
-
