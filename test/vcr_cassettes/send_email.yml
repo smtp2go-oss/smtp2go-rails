@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.smtp2go.com/v3/email/send
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"test-api-key","sender":"dave@example.com","to":["matt@example.com"],"subject":"Test
+        Message","text_body":"Test Content"}'
+    headers:
+      Content-Type:
+      - application/json
+      X-Smtp2go-Api:
+      - smtp2go-ruby
+      X-Smtp2go-Api-Version:
+      - 0.0.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 23 Mar 2017 00:11:59 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '109'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - POST, OPTIONS, GET
+      Access-Control-Allow-Headers:
+      - Content-Type, Authorization
+      Access-Control-Max-Age:
+      - '3600'
+      X-Ratelimit-Remaining:
+      - '249'
+      X-Ratelimit-Limit:
+      - '250'
+      X-Ratelimit-Reset:
+      - "-3"
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"request_id": "556763c6-0f5d-11e7-aa52-f23c91285f72", "data": {"failures":
+        [], "succeeded": 1, "failed": 0}}'
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 00:12:03 GMT
+recorded_with: VCR 3.0.3

@@ -19,5 +19,9 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", "~> 5.0.2"
   s.add_dependency "smtp2go", "~> 0"
 
+  s.add_development_dependency "guard"
+  s.add_development_dependency "guard-minitest"
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency "vcr"
+  s.add_development_dependency "webmock"
 end

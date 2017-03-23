@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.smtp2go.com/v3/email/send
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"test-api-key","sender":"matt@example.com","to":["dave@example.com"],"subject":"Test
+        Message","text_body":"Test Content"}'
+    headers:
+      Content-Type:
+      - application/json
+      X-Smtp2go-Api:
+      - smtp2go-ruby
+      X-Smtp2go-Api-Version:
+      - 0.0.1
+  response:
+    status:
+      code: 400
+      message: BAD REQUEST
+    headers:
+      Date:
+      - Thu, 23 Mar 2017 01:28:13 GMT
+      Server:
+      - Apache/2.4.10 (Debian)
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '304'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Access-Control-Allow-Methods:
+      - POST, OPTIONS, GET
+      Access-Control-Allow-Headers:
+      - Content-Type, Authorization
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"request_id": "fb60f22e-0f67-11e7-aa52-f23c91285f72", "data": {"error":
+        "The API Key passed was not in the correct format, Please check the key is
+        correct and try again, The full API key can be found in the API Keys section
+        in the admin console.", "error_code": "E_ApiResponseCodes.INVALID_IN_PAYLOAD"}}'
+    http_version: 
+  recorded_at: Thu, 23 Mar 2017 01:28:13 GMT
+recorded_with: VCR 3.0.3
