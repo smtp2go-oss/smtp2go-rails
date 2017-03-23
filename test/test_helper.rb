@@ -11,7 +11,6 @@ VCR.configure do |config|
   config.hook_into :webmock
 end
 
-
 # Filter out Minitest backtrace while allowing backtrace from other libraries
 # to be shown.
 Minitest.backtrace_filter = Minitest::BacktraceFilter.new

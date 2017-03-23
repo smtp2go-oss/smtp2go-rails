@@ -1,6 +1,7 @@
 require 'action_mailer'
 require 'smtp2go'
 
+
 module Smtp2go
   class Smtp2goMailer < ActionMailer::Base
     def mail(headers = {}, &block)

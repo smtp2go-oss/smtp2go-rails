@@ -3,3 +3,12 @@ language: ruby
 rvm:
   - 2.4.0
 before_install: gem install bundler -v 1.14.5
+service_name: travis-ci
+secure: "W56eUKz5KjHkbrX75rDw80RHz9a6+mfCcMf9OgZ0nOXkpOsiAn2exJRAgr56auB8QMwy4RAMTO77sqZmm8EbvhD4OZBEHH9ZYWMyz4U/J6JA3dLASbHUGdME/p6jXbQYGMUx+dumZxnicoebcVe1q76E0UC3Wf75pYmyMERa30TLmeYKCB3y0MKhRPmsX9Bafb19TldOvEwRpFIkB5jpzmiaxNqrzKKgt4WDq25Yqj8tX8B9UVUnz8RdTevQ87WsZzNtUA4XbLKMtHfcmiyAwVysP5SMqPyZ/75W1ynpa8F0xjPfPM8+0rvom0zCpyN3azMRbfMOowxLTH8M/JEmqjmqBAvMcdr8gR21VfKLv3g1llctXKCKYd+WbkmyF7uNmoTXpT8AWzQgNH9w9qpmEWgczQDtOEMH9NvsfZCVglOv7+93tODffsAZKUu8UyXUIbESKusXoDSAclTPfJaVLcuHMkDZYjfZsLC6dNi4nRJoom5xLc7KlR4kl5Vly2i+J2kB9VdxWaN/f5SQQ9T43DV56Ub48yAb2y77Rv+jZ0jlkW6SFuGRC3XXrUMV675tcw5PBpNg7PYzGn2Dk1/yY9WbSoTi6HUq1qhuYEcUfgxsYK43J/Y05Cs5T0T+/0zVcGmcbmpDD/1jMZJOsS3RaabS+7AnKv9ejUS5OS4bQUw="
+
+notifications:
+  slack:
+    template:
+      - "Build status: 👻%{result}👻 in %{duration} "
+      - "<%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author}"
+    secure: VukzX7mAGmtiPlKGVk2HUy2lcs/ukgLcg5/PZv4KPgmckmjxhPcho2b3j0vpO/soMuLxStUwsUSqqp0SW8lZrkn43Szb9ijHtQLYVi9ADAXegiC6O6p/uelhzqyu+OVvGqRMrTfUPhhNCWbis6RSQEZcROJPMBQLgPF0MuPXAwWV12eL8u/0LsfT0EP9m8rle7bRPexBiDNJiNJj9M3GZz/ZNpBakRLjEUH6OBiG6dTXQx2W6jizKf+/Nu3MH52FydJIXvwzpFiiTLz7GRW3BCyL0hCTw7ya/IOr/4Fh416hQ6cNRyIsPyzmBZYILuJVQdhMjRdIfr29yUPgms3aWYx5uQ2GwgZ6FRvdnLrtOHXcDmUgj/r2IB9K7aVtQnS0BXzS3e745BgyufwH3/lJsebZ2KbMtBN3utcinSn2uAgTPVGUQlrxvOPp5jac7zisdIQwrNBoVY/pipybp/jzG/6be5lLBxTQM9UmXoZSXfy4D4Rfcr+w6eZqbbTYJ0EJmPFc+b1rDVaqxS1BTTYWq4dJVL6hAMR4Gb9wSM+iFQi536S49P/+ZuVvw4WtG4+i2eFkfFZzbt82pVRClYr8Ip8RJ8oQrpGb0N9CsRG5PrQLch6mNR+/njMkZfFTYqyWjVpg73g8TMSzg871tG7jESgOs2rAEBSbW+adfAvQixo=
