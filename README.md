@@ -8,8 +8,7 @@
 
 # smtp2go-rails
 
-
-Ruby on Rails library for interfacing with the [smtp2go](https://www.smtp2go.com) API.
+[Ruby on Rails](http://rubyonrails.org) library for interfacing with the [smtp2go](https://www.smtp2go.com) API.
 
 > You might not need this gem at all! If you want to use smtp2go's SMTP server directly, simply add the following to your config/environment.rb:
 
