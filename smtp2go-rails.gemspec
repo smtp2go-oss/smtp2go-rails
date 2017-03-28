@@ -1,19 +1,15 @@
 $:.push File.expand_path('../lib', __FILE__)
 
-# Maintain your gem's version:
-require 'smtp2go/rails/version'
-
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = 'smtp2go-rails'
-  s.version     = Smtp2go::Rails::VERSION
+  s.version     = '0.1.1'
   s.authors     = ['smtp2go']
   s.email       = ['devs@smtp2go.com']
   s.homepage    = 'https://github.com/smtp2go-oss/smtp2go-rails'
   s.summary       = %q{Library for interfacing with smtp2go API from Ruby on Rails}
   s.description   = %q{Interacts directly with smtp2go's API to facilitate sending of email from Ruby on Rails.}
   s.license     = 'MIT'
-
 
   if s.respond_to?(:metadata)
     s.metadata['allowed_push_host'] = 'https://rubygems.org'
