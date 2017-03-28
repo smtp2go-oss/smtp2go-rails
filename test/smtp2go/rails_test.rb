@@ -60,7 +60,7 @@ class Smtp2go::Test < ActiveSupport::TestCase
     VCR.use_cassette('failed_send_email') do
       mailer = TestMailer.new
       payload = {
-        to: 'dave@example.com',
+        to: ['dave@example.com'],
         subject: 'Test Message',
         body: 'Test Content'
       }
@@ -74,7 +74,7 @@ class Smtp2go::Test < ActiveSupport::TestCase
     VCR.use_cassette('failed_send_email') do
       mailer = TestMailer.new
       payload = {
-        to: 'matt@example.com',
+        to: ['matt@example.com'],
         from: 'dave@example.com',
         body: 'Test Content'
       }
@@ -88,7 +88,7 @@ class Smtp2go::Test < ActiveSupport::TestCase
     VCR.use_cassette('failed_send_email') do
       mailer = TestMailer.new
       payload = {
-        to: 'matt@example.com',
+        to: ['matt@example.com'],
         from: 'dave@example.com',
         subject: 'Test Message'
       }
