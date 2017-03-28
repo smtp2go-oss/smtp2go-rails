@@ -27,6 +27,8 @@ config.action_mailer.smtp_settings = {
 }
 ```
 
+And of course, if you're not using Ruby on Rails, we have a [Ruby](https://github.com/smtp2go-oss/smtp2go-ruby) version too.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -45,7 +47,31 @@ Or install it yourself as:
 
 ## Usage
 
-    This project should be considered in its alpha phase and should not be used.
+Here is a short example that will send an email directly from a controller:
+
+    require 'smtp2go'
+
+    class StaticPagesController < ApplicationController
+      def home
+        payload = {
+          :from => 'dave@example.com',
+          :to => ['matt@example.com'],
+          :subject => 'Testing the smtp2go Rails Client',
+          :body => 'Test message.'
+        }
+        smtp2go_mailer = Smtp2go::Smtp2goMailer.new
+        smtp2go_mailer.mail(payload)
+      end
+    end
+
+You can subclass `Smtp2go::Smtp2goMailer` and add default values in the usual way:
+
+    class DefaultValuesMailer < Smtp2go::Smtp2goMailer
+      default :to => ['dave@example.com']
+      default :from => 'matt@example.com'
+      default :subject => 'Testing the smtp2go Rails Client'
+      default :body => 'Test message'
+    end
 
 ## Development
 
@@ -55,4 +81,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/smtp2go.
+Bug reports and pull requests are welcome on GitHub at https://github.com/smtp2go-oss/smtp2go-rails.

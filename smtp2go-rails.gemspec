@@ -27,10 +27,10 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'rails', '~> 5.0', '>= 5.0.2'
   s.add_runtime_dependency 'smtp2go', '~> 0'
 
-  s.add_development_dependency 'coveralls', '~> 0'
-  s.add_development_dependency 'guard', '~> 0' 
-  s.add_development_dependency 'guard-minitest', '~> 0'
-  s.add_development_dependency 'sqlite3', '~> 0'
-  s.add_development_dependency 'vcr', '~> 0'
-  s.add_development_dependency 'webmock', '~> 0'
+  s.add_development_dependency 'coveralls', '~> 0.8.19'
+  s.add_development_dependency 'guard', '~> 2.13', '>= 2.13.0'
+  s.add_development_dependency 'guard-minitest', '~> 2.4'
+  s.add_development_dependency 'sqlite3', '~> 1.3'
+  s.add_development_dependency 'vcr', '~> 3.0', '>= 3.0.3'
+  s.add_development_dependency 'webmock', '~> 2.3', '>= 2.3.2'
 end
