@@ -24,13 +24,13 @@ Gem::Specification.new do |s|
 
   s.files = Dir['{app,config,db,lib}/**/*', 'LICENSE.txt', 'Rakefile', 'README.md']
 
-  s.add_dependency 'rails', '~> 5.0.2'
-  s.add_dependency 'smtp2go', '~> 0'
+  s.add_runtime_dependency 'rails', '~> 5.0', '>= 5.0.2'
+  s.add_runtime_dependency 'smtp2go', '~> 0'
 
-  s.add_development_dependency 'coveralls'
-  s.add_development_dependency 'guard'
-  s.add_development_dependency 'guard-minitest'
-  s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'vcr'
-  s.add_development_dependency 'webmock'
+  s.add_development_dependency 'coveralls', '~> 0'
+  s.add_development_dependency 'guard', '~> 0' 
+  s.add_development_dependency 'guard-minitest', '~> 0'
+  s.add_development_dependency 'sqlite3', '~> 0'
+  s.add_development_dependency 'vcr', '~> 0'
+  s.add_development_dependency 'webmock', '~> 0'
 end
